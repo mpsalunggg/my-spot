@@ -1,50 +1,74 @@
-# React + TypeScript + Vite
+# My Spot
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My Spot is a geographic information system (GIS) based application that allows users to create location points with images, descriptions, and associated titles for each point entered. the data is stored in the user's browser localstorage so that the stored data is not lost when added, but it is only in the browser. This is link deploy -> [Link](https://my-spot-pearl.vercel.app/)
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Our Feature](#requirements-test)
+- [Data](#data)
+- [How To Run Project](#how-to-run-project)
+- [Main Stack](#main-stack)
 
-## Expanding the ESLint configuration
+### Data
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Example Data and type:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+{
+  id: number,
+  title: string,
+  latitude: string | number,
+  longitude: string | number,
+  description: string,
+  image: string
+}
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Our Feature
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- Create point location
+- Read detail point location
+- Update point location
+- Delete point location
+- Add toast Alert
+- Select location
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### How To Run Project
+
+- Use node > 20
+- Clone Repository
+  Clone repository:
+
+  ```bash
+  // with https
+  git clone https://github.com/mpsalunggg/my-spot.git
+  // with ssh
+  git clone git@github.com:mpsalunggg/my-spot.git
+  cd my-spot
+  ```
+
+- Install Dependencies
+
+  ```bash
+  yarn install
+  // or
+  npm install
+  ```
+
+- Run Server Development
+
+  ```bash
+  yarn dev
+  // or
+  npm run dev
+  ```
+
+### Main Stack
+
+- Typescript
+- React Vite
+- ShadcnUI / based on RadixUI
+- React Hook Form
+- Zod
+- Tailwind CSS
+- React-leaflet
