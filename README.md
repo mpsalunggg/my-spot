@@ -4,8 +4,8 @@ My Spot is a geographic information system (GIS) based application that allows u
 
 ## Table of Contents
 
-- [Our Feature](#requirements-test)
 - [Data](#data)
+- [Our Feature](#our-feature)
 - [How To Run Project](#how-to-run-project)
 - [Main Stack](#main-stack)
 
